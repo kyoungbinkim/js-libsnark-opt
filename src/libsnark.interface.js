@@ -4,7 +4,6 @@
 import _ from 'lodash';
 import ffi from 'ffi-napi';
 import ref from 'ref-napi';
-import JSONbig from 'json-bigint';
 import fs from 'fs';
 import process from 'process';
 import path from 'path';
