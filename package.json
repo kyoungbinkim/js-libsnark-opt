@@ -1,0 +1,23 @@
+{
+  "name": "js-libsnark-opt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start" : "node --experimental-modules --es-module-specifier-resolution=node",
+    "compile" : "npm start ./src/index.js compile",
+    "init" : "npm start ./src/index.js init",
+    "copy" : "npm start ./src/index.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyoungbinkim/js-libsnark-opt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyoungbinkim/js-libsnark-opt/issues"
+  },
+  "homepage": "https://github.com/kyoungbinkim/js-libsnark-opt#readme"
+}
