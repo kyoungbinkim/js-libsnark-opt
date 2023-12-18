@@ -8,10 +8,10 @@ import fs from 'fs';
 import process from 'process';
 import path from 'path';
 import os from 'node:os'
+import config from './config';
 
-let snarkLibPath = ''; 
+let snarkLibPath = config.LIBSNARK_PATH; 
 const ffi_flags = ffi.DynamicLibrary.FLAGS.RTLD_NOW | ffi.DynamicLibrary.FLAGS.RTLD_GLOBAL;
-snarkLibPath = Config.homePath+'/src/core/libsnark/js-libsnark-opt/libsnark/libSnark.dylib';
 
 
 // const cINT      = "int";
