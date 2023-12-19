@@ -8,7 +8,11 @@
     "start": "node --experimental-modules --es-module-specifier-resolution=node",
     "compile": "npm start ./src/index.js compile",
     "init": "npm start ./src/index.js init",
-    "copy": "npm start ./src/index.js copy"
+    "copy": "npm start ./src/index.js copy",
+    "test" : "npm start ./src/index.js test",
+    "regi" : "npm start ./src/index.js test regi",
+    "gen" : "npm start ./src/index.js test gen",
+    "accpt" : "npm start ./src/index.js test accpt"
   },
   "repository": {
     "type": "git",
