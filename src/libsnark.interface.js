@@ -6,8 +6,6 @@ import ffi from 'ffi-napi';
 import ref from 'ref-napi';
 import fs from 'fs';
 import process from 'process';
-import path from 'path';
-import os from 'node:os'
 import config from './config';
 
 let snarkLibPath = config.LIBSNARK_PATH; 
