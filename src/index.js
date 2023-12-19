@@ -15,7 +15,7 @@ switch(process.argv[2]){
         compileSnark();
         break;
     
-    case "test":
+    case "copy":
         copySnark();
         break;
 }
