@@ -28,8 +28,17 @@ export const copySnark = () => {
         console.log(stdout);
     })
 }
+
+/**
+ * 
+ * @param {String} circuit_name  regi or gen or accpt
+ */
+export const testSnark = (circuit_name) => {
+    // TODO
+}
  
 export default {
     compileSnark,
     copySnark,
+    testSnark,
 }
