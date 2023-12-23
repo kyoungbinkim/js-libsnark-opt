@@ -28,8 +28,45 @@ export const copySnark = () => {
         console.log(stdout);
     })
 }
+
+/**
+ * 
+ * @param {String} circuit_name  regi or gen or accpt
+ */
+export const testSnark = (circuit_name) => {
+    const LIBSNARK_SRC_DIR = config.LIBSNARK_PATH + '../libsnark-optimization/';
+    const LIBSNARK_TEST_DIR = path.resolve(LIBSNARK_SRC_DIR, 'test');
+
+    exec(`cd ${LIBSNARK_TEST_DIR}/ && ls && make ${circuit_name}`, (err, stdout, stderr) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log(stdout);
+        copyTestCRS(circuit_name)
+    })
+}
+
+const copyTestCRS = (circuit_name) => {
+    const LIBSNARK_SRC_DIR = config.LIBSNARK_PATH + '../libsnark-optimization/';
+    const LIBSNARK_TEST_DIR = path.resolve(LIBSNARK_SRC_DIR, 'test');
+
+    const crs = ['pk', 'vk', 'proof', ]
+
+    crs.forEach((value, index, array)=>{
+        const crsDir = value !='proof' ? 'zkverse_' + circuit_name + '_crs_' + value + '.json' : 'zkverse_' + circuit_name + '_' + value + '.json';
+        exec(`cp ${LIBSNARK_TEST_DIR}/${crsDir} ${config.LIBSNARK_PATH}`, (err, stdout, stderr) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log(stdout);
+        })
+    })
+}
  
 export default {
     compileSnark,
     copySnark,
+    testSnark,
 }
