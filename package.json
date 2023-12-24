@@ -9,10 +9,11 @@
     "compile": "npm start ./src/index.js compile",
     "init": "npm start ./src/index.js init",
     "copy": "npm start ./src/index.js copy",
-    "test" : "npm start ./src/index.js test",
-    "regi" : "npm start ./src/index.js test regi",
-    "gen" : "npm start ./src/index.js test gen",
-    "accpt" : "npm start ./src/index.js test accpt"
+    "snark" : "npm start ./src/index.js snark",
+    "regi" : "npm start ./src/index.js snark regi",
+    "gen" : "npm start ./src/index.js snark gen",
+    "accpt" : "npm start ./src/index.js snark accpt",
+    "test" : "mocha --experimental-modules --es-module-specifier-resolution=node ./src/test/input.test.js"
   },
   "repository": {
     "type": "git",
