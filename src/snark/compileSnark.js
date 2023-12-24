@@ -2,7 +2,7 @@ import process from 'process';
 import path from 'path';
 import os from 'node:os';
 import {exec} from 'child_process';
-import config from './config';
+import config from '../config';
 
 export const compileSnark = () => {
     exec('cd ./libsnark-optimization && make release=yes', (err, stdout, stderr) => {
@@ -43,6 +43,7 @@ export const testSnark = (circuit_name) => {
             return;
         }
         console.log(stdout);
+        console.log(stderr);
         copyTestCRS(circuit_name)
     })
 }

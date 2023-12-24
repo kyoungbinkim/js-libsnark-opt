@@ -6,7 +6,7 @@ import ffi from 'ffi-napi';
 import ref from 'ref-napi';
 import fs from 'fs';
 import process from 'process';
-import config from './config';
+import config from '../config';
 
 let snarkLibPath = config.LIBSNARK_PATH; 
 const ffi_flags = ffi.DynamicLibrary.FLAGS.RTLD_NOW | ffi.DynamicLibrary.FLAGS.RTLD_GLOBAL;
