@@ -1,11 +1,19 @@
 
+export const isHex = (str) => {
+    return /^[0-9a-fA-F]+$/.test(str);
+}
+
 class snarkInputClass{
+    #circuit_type;
+    #key;
+    
     /**
      * 
      * @param {*} circuit_type 
      */
-    constructor(circuit_type){
-        this.circuit_type = circuit_type;
+    constructor(circuit_type, key=''){
+        this.#circuit_type = circuit_type;
+        this.#key = key;
         this.input = {};
     }
 
@@ -13,12 +21,32 @@ class snarkInputClass{
         this.input[key] = value;
     }
 
-    check(){
-        // TODO : check INPUT is valid
+    getCircuitType(){
+        return this.#circuit_type;
     }
 
-    prove(key=undefined){
+    check(){
+        // TODO : check INPUT is valid
+        Object.keys(this.input).forEach((key, index, array)=>{
+            console.log(this.input[key], typeof this.input[key])
+            if (typeof this.input[key] == 'object' || typeof this.input[key] == 'array'){
+                this.input[key].forEach((value, index, array)=>{
+                    if(!isHex(value)){
+                        throw new Error("INPUT is not Hex");
+                    }
+                })
+            }
+            else if(!isHex(this.input[key])){
+                throw new Error("INPUT is not Hex");
+            }
+        })
+    }
+
+    prove(){
         // TODO : make SNARK Proof
+
+        this.check();
+
     }
 
     toJSON(){
