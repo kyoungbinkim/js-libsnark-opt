@@ -31,7 +31,7 @@ export const copySnark = () => {
 
 /**
  * 
- * @param {String} circuit_name  regi or gen or accpt
+ * @param {String} circuit_name  'regi' or 'gen' or 'accpt'
  */
 export const testSnark = (circuit_name) => {
     const LIBSNARK_SRC_DIR = config.LIBSNARK_PATH + '../libsnark-optimization/';
