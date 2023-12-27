@@ -6,15 +6,15 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-modules --es-module-specifier-resolution=node",
-    "clean" : "npm start ./src/index.js clean",
+    "clean": "npm start ./src/index.js clean",
     "compile": "npm start ./src/index.js compile",
     "init": "npm start ./src/index.js init",
     "copy": "npm start ./src/index.js copy",
-    "snark" : "npm start ./src/index.js snark",
-    "regi" : "npm start ./src/index.js snark regi",
-    "gen" : "npm start ./src/index.js snark gen",
-    "accpt" : "npm start ./src/index.js snark accpt",
-    "test" : "mocha --experimental-modules --es-module-specifier-resolution=node ./src/test/input.test.js"
+    "snark": "npm start ./src/index.js snark",
+    "regi": "npm start ./src/index.js snark regi",
+    "gen": "npm start ./src/index.js snark gen",
+    "accpt": "npm start ./src/index.js snark accpt",
+    "test": "mocha --experimental-modules --es-module-specifier-resolution=node ./src/test/input.test.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,11 @@
   },
   "homepage": "https://github.com/kyoungbinkim/js-libsnark-opt#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "ffi-napi": "^4.0.3",
+    "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
+    "process": "^0.11.10",
     "ref-napi": "^3.0.3"
   }
 }
