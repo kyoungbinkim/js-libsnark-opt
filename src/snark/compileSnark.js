@@ -43,7 +43,6 @@ export const testSnark = (circuit_name) => {
             return;
         }
         console.log(stdout);
-        console.log(stderr);
         copyTestCRS(circuit_name)
     })
 }
