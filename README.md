@@ -1,4 +1,6 @@
-## js-libsanrk-interface 
+<div align="center">
+  <h1>js-libsanrk-interface </h1>
+</div>
 
 main code is ./src/libsnark.interface.js
 
