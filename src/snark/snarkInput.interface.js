@@ -43,10 +43,7 @@ class snarkInputClass{
     }
 
     prove(){
-        // TODO : make SNARK Proof
-
-        this.check();
-
+        throw new Error("override prove() method");
     }
 
     toJSON(){
