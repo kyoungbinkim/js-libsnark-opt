@@ -3,7 +3,7 @@ export const isHex = (str) => {
     return /^[0-9a-fA-F]+$/.test(str);
 }
 
-class snarkInputClass{
+class SnarkInputClass{
     #circuit_type;
     #key;
     
@@ -51,4 +51,4 @@ class snarkInputClass{
     }
 }
 
-export default snarkInputClass;
+export default SnarkInputClass;

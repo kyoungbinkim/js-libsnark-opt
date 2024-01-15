@@ -1,7 +1,7 @@
 import fs from 'fs';
 import config from '../config';
 import { SnarkLib, SnarkLibUtils } from './libsnark.interface';
-import snarkInputClass from './makeSnarkInput';
+import SnarkInputClass from './snarkInput.interface';
 
 
 const serializeFormat = 3
